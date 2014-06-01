@@ -7,9 +7,17 @@ namespace Potz_TDD
 {
     public class Potz
     {
+        private string numeroCupom;
+        private int potz;
+
+        public int getPotz()
+        {
+            return potz;
+        }
+
         public bool isValido()
         {
-
+           
             return true;
         }
     }
