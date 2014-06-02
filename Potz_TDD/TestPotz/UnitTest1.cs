@@ -6,6 +6,8 @@ namespace TestPotz
     [TestClass]
     public class UnitTest1
     {
+
+
         [TestMethod]
         public void IsValidoTestTrue()
         {
@@ -16,7 +18,7 @@ namespace TestPotz
         [TestMethod]
         public void IsValidoTestFalse()
         {
-            CupomPotz cupompotz = new CupomPotz("100036532-7");
+            CupomPotz cupompotz = new CupomPotz("500036532-8");
 
             Assert.IsFalse(cupompotz.isValido());
         }

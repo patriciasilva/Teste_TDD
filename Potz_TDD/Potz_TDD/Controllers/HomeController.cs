@@ -23,11 +23,17 @@ namespace Potz_TDD.Controllers
             CupomPotz cupompotz = new CupomPotz(potz.numeroCupom);
             if (potz.numeroCupom != null)
             {
-                cupompotz.isValido();
-                cupompotz.quantidadePotz();
-                ViewBag.Valor = "Você recebeu " +cupompotz.getPotz() +" potz";
-            }
+                if (cupompotz.isValido())
+                {
 
+                    cupompotz.quantidadePotz();
+                    ViewBag.Valor = "Você recebeu " + cupompotz.getPotz() + " potz!";
+                }
+
+                else
+                    ViewBag.Valor = "Cupom Inválido";
+
+            }
             return View();
         }
         

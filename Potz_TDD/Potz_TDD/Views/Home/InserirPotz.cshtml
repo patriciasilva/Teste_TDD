@@ -4,13 +4,14 @@
     ViewBag.Title = "InserirPotz";
 }
 
+<div style="padding-left:400px;">
 <h2>InserirPotz</h2>
 
 <form action="~/Home/InserirPotz" method="post">
     <div>
         @using (Html.BeginForm())
         {
-            @Html.Label("Número do Cumpom Potz");
+            @Html.Label("Número do Cumpom Potz:");
             @Html.TextBoxFor(p => p.numeroCupom);
             <br />
             <input type="submit" value="Inserir" onclick="validate();" />
@@ -20,7 +21,7 @@
     </div>
 
 </form>
-
+</div>
 
 <script lang="javascript" type="text/javascript">
     function validate() {

@@ -45,7 +45,10 @@ namespace Potz_TDD
                 total = total + (Int32.Parse(numeroCupom.Substring(j, 1)) * i);
                 i++;
             }
-            return (total % 11) == 0;
+            if (total % 11 == 0)
+                return true;
+            else
+                return false;
         }
     }
 }
