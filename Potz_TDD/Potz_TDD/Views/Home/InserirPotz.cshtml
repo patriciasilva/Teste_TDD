@@ -1,0 +1,33 @@
+﻿@model Potz_TDD.Models.Potz
+
+@{
+    ViewBag.Title = "InserirPotz";
+}
+
+<h2>InserirPotz</h2>
+
+<form action="~/Home/InserirPotz" method="post">
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Número do Cumpom Potz");
+            @Html.TextBoxFor(p => p.numeroCupom);
+            <br />
+            <input type="submit" value="Inserir" onclick="validate();" />
+            <br />
+            @ViewBag.Valor
+        }
+    </div>
+
+</form>
+
+
+<script lang="javascript" type="text/javascript">
+    function validate() {
+        if (document.getElementById("numeroCupom").value == "") {
+            alert("O campo Número do Cumpom Potz é obrigatório");
+            document.getElementById("numeroCupom").focus();
+            return false;
+        }
+    }
+</script>

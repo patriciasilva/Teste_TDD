@@ -10,7 +10,6 @@ namespace TestPotz
         public void IsValidoTestTrue()
         {
             CupomPotz cupompotz = new CupomPotz("500036532-7");
-
             Assert.IsTrue(cupompotz.isValido());
         }
 

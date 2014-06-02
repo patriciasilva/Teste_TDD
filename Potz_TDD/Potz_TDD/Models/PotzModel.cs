@@ -5,8 +5,10 @@ using System.Web;
 
 namespace Potz_TDD.Models
 {
-    public class PotzModel
+    public class Potz
     {
-        public string PotzNum { get; set; }
+        public int ID { get; set; }
+        public string numeroCupom { get; set; }
+      
     }
 }
